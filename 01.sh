@@ -1,8 +1,7 @@
 #!/bin/bash
 
 #automating the web instances 
-
-ID =$(id -u)
+ID = $(id -u)
 echo "$ID"
 # if [ $ID  -ne  0 ]
 # then 
