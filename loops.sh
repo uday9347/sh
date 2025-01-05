@@ -1,6 +1,6 @@
 #!/bin/bash
 TIMESTAMP=$(date +%F-%H-%M-%S)
-LOGFILE="/tmp/$0-TIMESTAMP.log"
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
 echo "installing the packages"
 
 VALIDATE()
@@ -17,6 +17,7 @@ PACKAGES=("git","nginx",)
 
 for i in PACKAGES
 do 
-    dnf install i -y &>> $LOGFILE
+    echo "$i"
+    dnf install $i -y &>> $LOGFILE
     VALIDATE $? "installing $i"
 done
