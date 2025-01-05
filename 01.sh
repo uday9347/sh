@@ -19,9 +19,9 @@ VALIDATE()
 {
     if [ $1 -ne 0 ]
     then 
-        echo "$2 is success"
-    else
         echo "$2 is failed"
+    else
+        echo "$2 is success"
     fi
 }
 
