@@ -15,7 +15,7 @@ VALIDATE()
 
 PACKAGES=("git","nginx",)
 
-for i in PACKAGES
+for i in $PACKAGES
 do 
     echo "$i"
     dnf install $i -y &>> $LOGFILE
