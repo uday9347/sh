@@ -26,7 +26,7 @@ VALIDATE()
 }
 
 
-dnf install nginx -y &>> LOGFILE
+dnf install nginx -y &>> $LOGFILE
 VALIDATE $? "installing nginx"
 
 # systemctl enable nginx
